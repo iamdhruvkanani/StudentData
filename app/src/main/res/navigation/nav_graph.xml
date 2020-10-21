@@ -3,26 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/input_fragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/input_fragment"
         android:name="sheridan.kananid.midterm.ui.InputFragment"
-        android:label="@string/first_fragment_label"
+        android:label="Input"
         tools:layout="@layout/fragment_input">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_input_to_output"
+            app:destination="@id/output_fragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/output_fragment"
         android:name="sheridan.kananid.midterm.ui.OutputFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Output"
         tools:layout="@layout/fragment_output">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_output_to_input"
+            app:destination="@id/input_fragment" />
     </fragment>
+    <dialog
+        android:id="@+id/about_dialog"
+        android:name="sheridan.kananid.midterm.ui.AboutDialog"
+        android:label="AboutDialog" />
+    <action android:id="@+id/action_global_to_about" app:destination="@id/about_dialog" />
 </navigation>
