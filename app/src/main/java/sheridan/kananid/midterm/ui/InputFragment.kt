@@ -28,7 +28,7 @@ class InputFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentInputBinding.inflate(inflater, container, false)
         binding.submitButton.setOnClickListener { showOutput() }
-        return inflater.inflate(R.layout.fragment_input, container, false)
+        return binding.root
     }
 
     private fun showOutput() {
