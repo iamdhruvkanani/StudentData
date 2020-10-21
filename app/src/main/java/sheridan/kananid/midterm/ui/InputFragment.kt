@@ -33,7 +33,14 @@ class InputFragment : Fragment() {
 
     private fun showOutput() {
         val studentName = binding.nameInput.text.toString().trim()
-        val isinternational: Boolean = binding.internationalCheckBox.isChecked
+        val isInternational:String
+        if(binding.internationalCheckBox.isChecked ){
+             isInternational = getString(R.string.international)
+        }
+        else{
+            isInternational = getString(R.string.notInternational)
+        }
+
         if(studentName.isEmpty()){
             val required = getString(R.string.required)
             binding.nameInput.error = required
@@ -41,7 +48,7 @@ class InputFragment : Fragment() {
         }else{
             val programList = resources.getStringArray(R.array.program_list)
             val program = programList[binding.programInput.selectedItemPosition]
-            val studentInfo = StudentInfo(studentName, program,isinternational)
+            val studentInfo = StudentInfo(studentName, program,isInternational)
             viewModel.submit(studentInfo)
             findNavController().navigate(R.id.action_input_to_output)
         }
