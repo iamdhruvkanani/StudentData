@@ -24,5 +24,6 @@
 
     <!-- validation error -->
     <string name="required">required</string>
+    <string name="international">International</string>
 
 </resources>
