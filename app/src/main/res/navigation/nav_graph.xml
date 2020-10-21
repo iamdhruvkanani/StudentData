@@ -9,7 +9,7 @@
         android:id="@+id/FirstFragment"
         android:name="sheridan.kananid.midterm.InputFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_input">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -19,7 +19,7 @@
         android:id="@+id/SecondFragment"
         android:name="sheridan.kananid.midterm.OutputFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_output">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
